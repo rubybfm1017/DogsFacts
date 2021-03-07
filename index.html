@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>But First, Coffee</title>
+    <link rel="icon" href="./images/favicon.png" type="image/png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheets/reset.css">
+    <link rel="stylesheet" href="./stylesheets/header.css">
+    <link rel="stylesheet" href="./stylesheets/graph.css">
+    <link rel="stylesheet" href="./stylesheets/main.css">
+    <link rel="stylesheet" href="./stylesheets/modal.css">
+
+    <meta name="title" property="og:title" content="But First, Coffee" />
+    <meta property="og:type" content="Website" />
+    <meta name="image" property="og:image" content="images/meta-image.jpg" />
+    <meta name="description" property="og:description"
+        content="A data visualization website to displays nutritional facts of popular Starbucks drinks." />
+    <meta name="author" content="Aishwarya Nair" />
+
+</head>
+<body class="entire-page">
+    <header class="header">
+        <div class="title">dogs stats</div>
+        <div class="about-me">
+            <h1 class="by-name">by Qi Zhu</h1>
+            <div class="about-me-links">
+                <a class="header-link" href="" target=”_blank”>
+                    <img src="./images/github.png" alt="">
+                </a>
+                <a class="header-link" href="" target=”_blank”>
+                    <img src="./images/linkedin.png" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="horizontal-line"></div>
+
+    <div class="main">
+        <ul class="all-pics">
+            <li class="indiv-image selected">
+                <img class="click-me" src="./images/chihuahua.jpg" alt="chihuahua">
+                <h1 class="caption">Chihuahua</h1>
+            </li>
+            <li class="indiv-image">
+                <img class="click-me" src="./images/bichon_frise.jpg" alt="bichon_frise">
+                <h1 class="caption">Bichon Frise</h1>
+            </li>
+        </ul>
+
+        <div class="graph">
+            <h1>Stats Per Breed</h1>
+            <h2>Stats scale from 1 to 5</h2>
+            <canvas id="myChart"></canvas>
+            <script src="graph.js"></script>
+        </div>
+    </div>
+
+    <div class="modal is-open"> 
+        <div class="modal-text">
+            <h1 class="modal-title">dog stats</h1>
+            <h2>designed and developed by Qi Zhu</h2>
+            <p>Welcome to a data visualization website that displays stats for dog breeds!
+               Click on any dog and hover over the graph to learn about its stats.
+            </p>
+            <button class="modal-close">Get Started!</button>
+        </div>
+    
+        <div class="modal-screen"></div>
+        <script src="modal.js"></script>
+    </div>
+
+</body>
+</html>

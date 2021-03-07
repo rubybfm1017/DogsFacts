@@ -1,112 +1,104 @@
 Chart.defaults.global.defaultFontFamily = 'Raleway, sans-serif'
 Chart.defaults.global.defaultFontColor = 'black';
 
-// % of DV based on a 2000 Calorie Daily Intake
-const latte = {
-    name: ['Caffè Latte'],
-    fat: [9],
-    cholesterol: [10],
-    sodium: [7],
-    carbs: [7],
-    protein: [26]
+const chihuahua = {
+    name: ['Chihuahua'],
+    energy: [5],
+    exercise: [1],
+    playfulness: [2],
+    affection: [2],
+    ftd: [1],
+    fto: [3],
+    fts: [1],
+    watchfulness: [1],
+    training: [2],
+    grooming: [2],
+    heat: [2],
+    vocality: [5]
 };
-const psl = {
-    name: ['Pumpkin Spice Latte'],
-    fat: [18],
-    cholesterol: [18],
-    sodium: [10],
-    carbs: [19],
-    protein: [28]
-};
-const chai = {
-    name: ['Chai Latte'],
-    fat: [6],
-    cholesterol: [7],
-    sodium: [5],
-    carbs: [16],
-    protein: [16]
-};
-const mocha = {
-    name: ['Iced Caffè Mocha'],
-    fat: [22],
-    cholesterol: [18],
-    sodium: [4],
-    carbs: [14],
-    protein: [20]
-};
-const caramel_macchiato = {
-    name: ['Iced Caramel Macchiato'],
-    fat: [9],
-    cholesterol: [8],
-    sodium: [7],
-    carbs: [13],
-    protein: [20]
-};
-const pumpkin_cold_brew = {
-    name: ['Pumpkin Cream Cold Brew'],
-    fat: [15],
-    cholesterol: [13],
-    sodium: [2],
-    carbs: [11],
-    protein: [6]
-};
-const hot_chocolate = {
-    name: ['Hot Chocolate'],
-    fat: [19],
-    cholesterol: [15],
-    sodium: [7],
-    carbs: [16],
-    protein: [28]
-};
-const caramel_frap = {
-    name: ['Caramel Frappuccino'],
-    fat: [19],
-    cholesterol: [15],
-    sodium: [10],
-    carbs: [21],
-    protein: [8]
-};
-const cookie_frap = {
-    name: ['Mocha Cookie Frappuccino'],
-    fat: [19],
-    cholesterol: [18],
-    sodium: [11],
-    carbs: [23],
-    protein: [12]
+const bichon_frise = {
+    name: ['Bichon Frise'],
+    energy: [4],
+    exercise: [2],
+    playfulness: [5],
+    affection: [5],
+    ftd: [4],
+    fto: [4],
+    fts: [5],
+    watchfulness: [1],
+    training: [4],
+    grooming: [5],
+    heat: [3],
+    vocality: [4]
 };
 
-let drink = latte
+let dog = chihuahua
 
 const ctx = document.getElementById("myChart");
 const myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: drink.name,
+        labels: dog.name,
         datasets: [
             {
-                label: 'Total Fat',
-                data: drink.fat,
-                backgroundColor: '#cde5ce',
+                label: 'Energy Level',
+                data: dog.energy,
+                backgroundColor: '#cde6ce',
             },
             {
-                label: 'Carbohydrates',
-                data: drink.carbs,
-                backgroundColor: '#e6cbe3',
+                label: 'Exercise Requirements',
+                data: dog.exercise,
+                backgroundColor: '#f6cbe3',
             },
             {
-                label: 'Protein',
-                data: drink.protein,
-                backgroundColor: '#c9cce8',
+                label: 'Playfulness',
+                data: dog.playfulness,
+                backgroundColor: '#c9cde8',
             },
             {
-                label: 'Sodium',
-                data: drink.sodium,
-                backgroundColor: '#b9def8',
+                label: 'Affection Level',
+                data: dog.affection,
+                backgroundColor: '#b9fef8',
             },
             {
-                label: 'Cholesterol',
-                data: drink.cholesterol,
-                backgroundColor: '#ffc6b3',
+                label: 'Friendliness To Dogs',
+                data: dog.ftd,
+                backgroundColor: '#fgc6b3',
+            },
+            {
+                label: 'Friendliness To Other Pets',
+                data: dog.fto,
+                backgroundColor: '#rfc6b3',
+            },
+            {
+                label: 'Friendliness To Strangers',
+                data: dog.fts,
+                backgroundColor: '#ffcca3',
+            },
+            {
+                label: 'Watchfulness',
+                data: dog.watchfulness,
+                backgroundColor: '#fbg6b3',
+            },
+            {
+                label: 'Ease of Training',
+                data: dog.training,
+                backgroundColor: '#fhc656',
+            },
+            {
+                label: 'Grooming Requirements',
+                data: dog.grooming,
+                backgroundColor: '#eec6b3',
+            },
+            {
+                label: 'Heat Sensitivity',
+                data: dog.heat,
+                backgroundColor: '#f123b3',
+            },
+            {
+                label: 'Vocality',
+                data: dog.vocality,
+                backgroundColor: '#ff2343',
             }
         ]
     },
@@ -121,13 +113,13 @@ const myChart = new Chart(ctx, {
             yAxes: [{
                 stacked: true,
                 ticks: {
-                    beginAtZero: true,
-                    stepValue: 10,
-                    max: 100
+                    beginAtZero: false,
+                    stepValue: 1,
+                    max: 50
                 },
                 scaleLabel: {
                     display: true,
-                    labelString: '% Daily Value Per Category'
+                    labelString: 'Stats Per Breed'
                 }
             }]
         },
@@ -136,7 +128,7 @@ const myChart = new Chart(ctx, {
                 label: function (tooltipItem, data) {
                     let label = data.datasets[tooltipItem.datasetIndex].label;
                     label += ': ' + tooltipItem.yLabel;
-                    return ' ' + label + '% Daily Value';
+                    return ' ' + label + ' Star';
                 }
             }
         },
@@ -153,36 +145,72 @@ document.addEventListener('click', (event) => {
     }
     event.target.parentElement.classList.add("selected");
 
-    drink = eval(event.target.alt)
+    dog = eval(event.target.alt)
     
-    myChart.data.labels = drink.name;    
+    myChart.data.labels = dog.name;    
     myChart.data.datasets = [
         {
-            label: 'Total Fat',
-            data: drink.fat,
-            backgroundColor: '#cde5ce',
+            label: 'Energy Level',
+            data: dog.energy,
+            backgroundColor: '#cde6ce',
         },
         {
-            label: 'Carbohydrates',
-            data: drink.carbs,
-            backgroundColor: '#e6cbe3',
+            label: 'Exercise Requirements',
+            data: dog.exercise,
+            backgroundColor: '#f6cbe3',
         },
         {
-            label: 'Protein',
-            data: drink.protein,
-            backgroundColor: '#c9cce8',
+            label: 'Playfulness',
+            data: dog.playfulness,
+            backgroundColor: '#c9cde8',
         },
         {
-            label: 'Sodium',
-            data: drink.sodium,
-            backgroundColor: '#b9def8',
+            label: 'Affection Level',
+            data: dog.affection,
+            backgroundColor: '#b9fef8',
         },
         {
-            label: 'Cholesterol',
-            data: drink.cholesterol,
-            backgroundColor: '#ffc6b3',
+            label: 'Friendliness To Dogs',
+            data: dog.ftd,
+            backgroundColor: '#fgc6b3',
+        },
+        {
+            label: 'Friendliness To Other Pets',
+            data: dog.fto,
+            backgroundColor: '#rfc6b3',
+        },
+        {
+            label: 'Friendliness To Strangers',
+            data: dog.fts,
+            backgroundColor: '#ffcca3',
+        },
+        {
+            label: 'Watchfulness',
+            data: dog.watchfulness,
+            backgroundColor: '#fbg6b3',
+        },
+        {
+            label: 'Ease of Training',
+            data: dog.training,
+            backgroundColor: '#fhc656',
+        },
+        {
+            label: 'Grooming Requirements',
+            data: dog.grooming,
+            backgroundColor: '#eec6b3',
+        },
+        {
+            label: 'Heat Sensitivity',
+            data: dog.heat,
+            backgroundColor: '#f123b3',
+        },
+        {
+            label: 'Vocality',
+            data: dog.vocality,
+            backgroundColor: '#ff2343',
         }
     ]
     myChart.update();
 
 }, false);
+
