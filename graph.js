@@ -32,6 +32,145 @@ const bichon_frise = {
     vocality: [4]
 };
 
+const pumi = {
+    name: ['Pumi'],
+    energy: [4],
+    exercise: [4],
+    playfulness: [5],
+    affection: [5],
+    ftd: [3],
+    fto: [3],
+    fts: [2],
+    watchfulness: [4],
+    training: [5],
+    grooming: [4],
+    heat: [2],
+    vocality: [4]
+};
+
+const husky = {
+    name: ['Husky'],
+    energy: [3],
+    exercise: [4],
+    playfulness: [4],
+    affection: [4],
+    ftd: [3],
+    fto: [3],
+    fts: [5],
+    watchfulness: [1],
+    training: [1],
+    grooming: [3],
+    heat: [5],
+    vocality: [3]
+};
+
+const westie = {
+    name: ['Westie'],
+    energy: [4],
+    exercise: [3],
+    playfulness: [3],
+    affection: [5],
+    ftd: [3],
+    fto: [3],
+    fts: [4],
+    watchfulness: [1],
+    training: [4],
+    grooming: [4],
+    heat: [3],
+    vocality: [4]
+};
+const sloughi = {
+    name: ['Sloughi'],
+    energy: [3],
+    exercise: [4],
+    playfulness: [3],
+    affection: [3],
+    ftd: [2],
+    fto: [1],
+    fts: [2],
+    watchfulness: [2],
+    training: [2],
+    grooming: [1],
+    heat: [2],
+    vocality: [2]
+};
+const sarplaninac = {
+    name: ['Sarplaninac'],
+    energy: [3],
+    exercise: [4],
+    playfulness: [2],
+    affection: [1],
+    ftd: [1],
+    fto: [1],
+    fts: [1],
+    watchfulness: [5],
+    training: [2],
+    grooming: [3],
+    heat: [1],
+    vocality: [2]
+};
+const rottweiler = {
+    name: ['Rottweiler'],
+    energy: [3],
+    exercise: [3],
+    playfulness: [2],
+    affection: [2],
+    ftd: [1],
+    fto: [2],
+    fts: [1],
+    watchfulness: [5],
+    training: [3],
+    grooming: [1],
+    heat: [4],
+    vocality: [5]
+};
+const hamiltonstove = {
+    name: ['Hamiltonstove'],
+    energy: [4],
+    exercise: [5],
+    playfulness: [3],
+    affection: [3],
+    ftd: [3],
+    fto: [2],
+    fts: [2],
+    watchfulness: [2],
+    training: [4],
+    grooming: [1],
+    heat: [1],
+    vocality: [5]
+};
+const golden_retriever = {
+    name: ['Golden_retriever'],
+    energy: [3],
+    exercise: [3],
+    playfulness: [5],
+    affection: [5],
+    ftd: [5],
+    fto: [5],
+    fts: [5],
+    watchfulness: [2],
+    training: [5],
+    grooming: [3],
+    heat: [3],
+    vocality: [3]
+};
+const chow_chow = {
+    name: ['Chow chow'],
+    energy: [1],
+    exercise: [2],
+    playfulness: [1],
+    affection: [2],
+    ftd: [1],
+    fto: [3],
+    fts: [1],
+    watchfulness: [4],
+    training: [1],
+    grooming: [3],
+    heat: [5],
+    vocality: [5]
+};
+
+
 let dog = chihuahua
 
 const ctx = document.getElementById("myChart");
@@ -63,12 +202,12 @@ const myChart = new Chart(ctx, {
             {
                 label: 'Friendliness To Dogs',
                 data: dog.ftd,
-                backgroundColor: '#fgc6b3',
+                backgroundColor: '#FFD700',
             },
             {
                 label: 'Friendliness To Other Pets',
                 data: dog.fto,
-                backgroundColor: '#rfc6b3',
+                backgroundColor: '#00FFFF',
             },
             {
                 label: 'Friendliness To Strangers',
@@ -78,12 +217,12 @@ const myChart = new Chart(ctx, {
             {
                 label: 'Watchfulness',
                 data: dog.watchfulness,
-                backgroundColor: '#fbg6b3',
+                backgroundColor: '#8A2BE2',
             },
             {
                 label: 'Ease of Training',
                 data: dog.training,
-                backgroundColor: '#fhc656',
+                backgroundColor: '#D2691E',
             },
             {
                 label: 'Grooming Requirements',
@@ -159,12 +298,12 @@ document.addEventListener('click', (event) => {
         {
             label: 'Friendliness To Dogs',
             data: dog.ftd,
-            backgroundColor: '#fgc6b3',
+            backgroundColor: '#FFD700',
         },
         {
             label: 'Friendliness To Other Pets',
             data: dog.fto,
-            backgroundColor: '#rfc6b3',
+            backgroundColor: '#ADFF2F',
         },
         {
             label: 'Friendliness To Strangers',
@@ -174,7 +313,7 @@ document.addEventListener('click', (event) => {
         {
             label: 'Watchfulness',
             data: dog.watchfulness,
-            backgroundColor: '#fbg6b3',
+            backgroundColor: '#800000',
         },
         {
             label: 'Ease of Training',
