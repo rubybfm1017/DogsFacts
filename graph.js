@@ -104,23 +104,10 @@ const myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            xAxes: [{
-                stacked: true,
-                ticks: {
-                    fontSize: 16,
-                }
-            }],
             yAxes: [{
-                stacked: true,
                 ticks: {
-                    beginAtZero: false,
-                    stepValue: 1,
-                    max: 50
+                    beginAtZero: true
                 },
-                scaleLabel: {
-                    display: true,
-                    labelString: 'Stats Per Breed'
-                }
             }]
         },
         tooltips: {
