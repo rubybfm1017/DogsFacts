@@ -13,7 +13,7 @@
     left: 0;
     right: 0;
     z-index: 2;
-    background: #2f574c;
+    background: #DB7093;
 }
 
 .modal-text {
@@ -34,7 +34,7 @@
     font-size: 50px;
     font-weight: 700;
     letter-spacing: 1px;
-    color: #2f574c;
+    color: #DB7093;
     margin-bottom: 5px;
 }
 
@@ -57,7 +57,7 @@
 .modal-close {
     border: none;
     color: white;
-    background-color: #2f574c;
+    background-color: #DB7093;
     border: 1px solid transparent;
     border-radius: 10px;
     padding: 12px;
@@ -71,8 +71,8 @@
 
 .modal-close:hover {
     cursor: pointer;
-    color: #2f574c;
-    background-color: #75B4A3;
-    border: 1px solid #2f574c;
+    color: #DB7093;
+    background-color: #E6E6FA;
+    border: 1px solid #DB7093;
     transition: all 0.4s ease;
 }

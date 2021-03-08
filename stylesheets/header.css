@@ -31,7 +31,7 @@
     font-weight: 700;
     margin-top: 20px;
     letter-spacing: 1px;
-    color: #2f574c;
+    color: #DB7093;
 }
 
 .header-link {
@@ -50,7 +50,7 @@
 }
 
 .horizontal-line {
-    border-top: 1px solid #2f574c;
+    border-top: 1px solid #DB7093;
     width: 50%;
     margin: 0 auto;
 }
