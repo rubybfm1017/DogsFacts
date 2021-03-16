@@ -169,6 +169,21 @@ const chow_chow = {
     heat: [5],
     vocality: [5]
 };
+const dachshund = {
+    name: ['Dachshund'],
+    energy: [4],
+    exercise: [2],
+    playfulness: [3],
+    affection: [3],
+    ftd: [3],
+    fto: [2],
+    fts: [1],
+    watchfulness: [2],
+    training: [2],
+    grooming: [2],
+    heat: [3],
+    vocality: [5]
+};
 
 
 let dog = chihuahua
